@@ -79,7 +79,6 @@ body > section {
 }
 .turquoise,
 .green-sea,
-.sun-flower,
 .orange,
 .emerald,
 .nephrits,
@@ -96,9 +95,14 @@ body > section {
 .midnight-blue,
 .concrete,
 .asbestos {
-  color: #fff;
-    padding: 5px;
-    padding-bottom: 5px;
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.sun-flower {
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 1px;
 }
 .turquoise h1,
 .green-sea h1,
