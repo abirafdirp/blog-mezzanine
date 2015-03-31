@@ -4,8 +4,8 @@
 {% block blog_recent_posts %}
 {% blog_recent_posts 5 as recent_posts %}
 {% if recent_posts %}
-<h3>{% trans "Recent Posts" %}</h3>
-<ul class="arrow">
+<h3 style="margin-top: 0px; margin-bottom: 5px;">{% trans "Recent Posts" %}</h3>
+<ul class="arrow" style="padding-left: 1em; text-indent: -9px;">
 {% for recent_post in recent_posts %}
 <li><a href="{{ recent_post.get_absolute_url }}"
     >{{ recent_post.title }}</a></li>
@@ -13,27 +13,10 @@
 </ul>
 {% endif %}
 {% endblock %}
-
-{% block blog_months %}
-{% blog_months as months %}
-{% if months %}
-<h3>{% trans "Archive" %}</h3>
-{% for month in months %}
-    {% ifchanged month.date.year %}
-        {% if not forloop.first %}</ul>{% endif %}
-        <h6>{{ month.date.year }}</h6><ul class="arrow">
-    {% endifchanged %}
-    <li><a href="{% url "blog_post_list_month" year=month.date.year month=month.date.month %}"
-        >{{ month.date|date:"F" }}</a> ({{ month.post_count }})</li>
-{% endfor %}
-</ul>
-{% endif %}
-{% endblock %}
 {% block blog_categories %}
 {% blog_categories as categories %}
 {% if categories %}
-
-<div class="widget categories">
+<div class="widget categories" style="margin-bottom: 0px;">
                     <h3>{% trans "Categories" %}</h3>
                     <div class="row">
                         <div class="col-sm-12">
@@ -49,6 +32,23 @@
                 </div>
 {% endif %}
 {% endblock %}
+
+{% block blog_months %}
+{% blog_months as months %}
+{% if months %}
+<h3 style="margin-bottom: 10px; margin-top: 10px;">{% trans "Archive" %}</h3>
+{% for month in months %}
+    {% ifchanged month.date.year %}
+        {% if not forloop.first %}</ul>{% endif %}
+        <h5>{{ month.date.year }}</h6><ul class="arrow">
+    {% endifchanged %}
+    <li style="margin-left: 15px; padding-left 15px;"><a href="{% url "blog_post_list_month" year=month.date.year month=month.date.month %}"
+        >{{ month.date|date:"F" }}</a> ({{ month.post_count }})</li>
+{% endfor %}
+</ul>
+{% endif %}
+{% endblock %}
+
 
 
 
