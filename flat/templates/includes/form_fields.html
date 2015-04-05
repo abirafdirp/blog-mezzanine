@@ -14,13 +14,13 @@
     {% if field.label %}<label style="margin-bottom: 20px; margin-right: 20px" class="control-label" for="{{ field.auto_id }}">{{ field.label }}</label>{% endif %}
     {{ field }}
     {% if field.errors %}
-    <p class="help-block">
+    <p class="help-block" style="padding-left: 5px">
         {% for e in field.errors %}
         {% if not forloop.first %} / {% endif %}{{ e }}
         {% endfor %}
     </p>
     {% elif field.help_text %}
-    <p class="help-block">{{ field.help_text }}</p>
+    <p class="help-block" style="padding-left: 5px">{{ field.help_text }}</p>
     {% endif %}
 </div>
 {% endif %}
