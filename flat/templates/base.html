@@ -27,7 +27,8 @@
     <link href="{% static "css/prettyPhoto.css" %}" rel="stylesheet">
     <link href="{% static "css/animate.css" %}" rel="stylesheet">
     <link href="{% static "css/main.css" %}" rel="stylesheet">
-
+    <link href="{% static "css/prettify/prettify.css" %}" type="text/css" rel="stylesheet">
+    <script src="{% static "css/prettify/prettify.js" %}"></script>
    
 
 
@@ -69,7 +70,7 @@
 
 {% block extra_head %}{% endblock %}
 </head>
-<body id="{% block body_id %}body{% endblock %}">
+<body id="{% block body_id %}body{% endblock %}" onload="prettyPrint()">
 
 
 <header class="navbar navbar-default navbar-fixed-top midnight-blue">
