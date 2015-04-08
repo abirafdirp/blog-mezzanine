@@ -1039,6 +1039,7 @@ ul.social > li > a:hover {
 }
 .blog .blog-item .blog-content {
   padding: 20px;
+  text-align: justify;
 }
 .blog .blog-item h3 {
   margin-top: 0;
