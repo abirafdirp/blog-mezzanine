@@ -360,7 +360,7 @@ body > section {
   position: absolute;
   width: 100%;
   display: block !important;
-  height: 800px;
+  height: 1000px;
   -webkit-transition: opacity ease-in-out 500ms;
   -moz-transition: opacity ease-in-out 500ms;
   -o-transition: opacity ease-in-out 500ms;
